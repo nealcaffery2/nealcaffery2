@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Popup</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="logo">
+            <img src="images/icon128.png" alt="Logo">
+        </div>
+        <h1>Search</h1>
+        <form id="searchForm">
+            <input type="text" id="cityInput" placeholder="Enter city" required>
+            <input type="text" id="stateInput" placeholder="Enter state" required>
+            <button id="searchButton" type="submit">Search</button>
+        </form>
+        <div id="loading" style="display:none;">Loading...</div>
+
+        <!-- Progress Bar (initially hidden) -->
+        <div id="progressBar" style="display:none;">Loading...</div>
+
+        <!-- Finished message and Download button container (initially hidden) -->
+        <div id="finishedContainer" style="display:none;">
+            <p>Finished!</p>
+            <button id="downloadButton" style="display:none;">Download</button>
+        </div>
+
+        <div id="results" style="display:none;"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

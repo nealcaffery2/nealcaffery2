@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "REIBOT - Real Estate Deal Finder",
+  "version": "1.0",
+  "description": "Find the best real estate deals with REIBOT. Powered by Zillow and ChatGPT.",
+  "icons": {
+    "16": "extension/images/icon16.png",
+    "48": "extension/images/icon48.png",
+    "128": "extension/images/icon128.png"
+  },
+  "browser_action": {
+    "default_popup": "extension/popup.html",
+    "default_icon": {
+      "16": "extension/images/icon16.png",
+      "48": "extension/images/icon48.png",
+      "128": "extension/images/icon128.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://zillow69.p.rapidapi.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "extension/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "extension/content.js"
+      ]
+    }
+  ]
+}
